@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-//TestEnya Given a bad character, see if it says the input is bad
+//TestInvalidASCII Given a bad character, see if it says the input is bad
 func TestInvalidASCII(t *testing.T) {
 	input := "EL NIÑO"
 	output := Invalid(input)
@@ -14,6 +14,7 @@ func TestInvalidASCII(t *testing.T) {
 	}
 }
 
+//TestAsterisks Given a bad character, see if it says the input is bad
 func TestAsterisks(t *testing.T) {
 	input := "cens*red"
 	output := Invalid(input)

@@ -23,6 +23,7 @@ func iterateNewlineFile(f *os.File, callback func(string)) error {
 			return err
 		}
 
+		//remove the newline character, then call the callback on the string
 		callback(strings.Replace(text, "\n", "", -1))
 	}
 	return nil
@@ -30,13 +31,13 @@ func iterateNewlineFile(f *os.File, callback func(string)) error {
 
 //////////////PUBLIC METHODS/////////////////
 
-//ConvertToMap takes a newline delineated file, and outputs a map of whether each lineitem is present in the file
-func ConvertToMap(f *os.File) (map[string]bool, error) {
+//ConvertToMap takes a newline delineated file, and outputs a map of whether each lineitem is present in the file. Also filters my minimum and maximum string lengths
+func ConvertToMap(f *os.File, min int, max int) (map[string]bool, error) {
 	m := make(map[string]bool)
 	cb := func(text string) {
 		runeLength := len([]rune(text))
 
-		if runeLength >= 8 && runeLength < 64 {
+		if runeLength >= min && runeLength < max {
 			m[text] = true
 		}
 	}

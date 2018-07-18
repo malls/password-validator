@@ -26,7 +26,7 @@ func main() {
 			panic("Please provide a valid invalid password list file.")
 		}
 
-		badPasswords, err := listconverter.ConvertToMap(f)
+		badPasswords, err := listconverter.ConvertToMap(f, 8, 64)
 
 		if err != nil {
 			panic(err)
