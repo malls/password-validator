@@ -13,7 +13,7 @@ The output looks like this:
 ```
 mom -> Error: Too Short
 password1 -> Error: Too Common
-*** -> Error: Invalid Charaters
+*** -> Error: Invalid Characters
 
 ```
 
