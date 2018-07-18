@@ -31,9 +31,12 @@ password1 -> Error: Too Common
 ### Running Uncompiled
 The main go entry point file is `src/main.go` and you can use this file much like the above example, piping input to it like this: `cat input.txt | go run src/main.go bad-passwords.txt`.
 
+### Tests
+You can run the unit tests with `go test -v ./...`. Everything must pass before submitting a pull request.
+
 ### Building
 
-`go build src/main.go ./password-validator`
+`go build src/main.go`
 
-### Tests
+
 
