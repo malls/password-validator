@@ -4,8 +4,8 @@ package ascii
 func Invalid(str string) bool {
 	for _, char := range str {
 
-		//if it's not one of the original 128 or *, it isn't allowed
-		if char > 127 || char == 42 {
+		//if it's *, or not a valid ASCII character, it isn't allowed
+		if char > 126 || char == 42 || char < 32 {
 			return true
 		}
 

@@ -33,7 +33,6 @@ func TestConvertToMap(t *testing.T) {
 	if output["hundredth"] != expected["hundredth"] {
 		t.Error("Short map test failed")
 	}
-
 }
 
 //TestConvertToSlice testes the ConvertToSlice method given example input from the root of the repo
