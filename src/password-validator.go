@@ -21,6 +21,7 @@ func main() {
 
 		//read the bad password file, then convert to a map we can reference
 		f, err := os.Open(badPasswordList)
+		defer f.Close()
 
 		if err != nil {
 			panic("Please provide a valid invalid password list file.")
@@ -55,7 +56,7 @@ func main() {
 
 	} else {
 		fmt.Println("Please provide a newline separated file of passwords.")
-		return
 	}
+	return
 
 }
