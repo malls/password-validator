@@ -1,8 +1,0 @@
-#bin/bash
-go test -v ./...
-
-EXITCODE = $?
-echo "exiting with exit code:"
-echo $EXITCODE
-
-exit $EXITCODE
