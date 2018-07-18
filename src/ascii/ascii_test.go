@@ -9,7 +9,7 @@ func TestInvalidASCII(t *testing.T) {
 	input := "EL NIÑO"
 	output := Invalid(input)
 
-	if output != true {
+	if output != false {
 		t.Error("TestInvalidASCII test failed")
 	}
 }
